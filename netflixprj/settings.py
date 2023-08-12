@@ -26,7 +26,7 @@ SECRET_KEY = 'f!7dlcf!rs7ee+hs8be!2n3q*k$)9y*s16srr^oa4iwk!e*!8+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['.vercel.app','.now.sh','127.0.0.1','localhost']
 
 
 # Application definition
@@ -140,9 +140,9 @@ AUTH_USER_MODEL = 'netflixapp.CustomUser'
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
 
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles_build", 'static')
 
 MEDIA_URL = '/media/'
 
